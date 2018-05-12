@@ -40,7 +40,6 @@ func RunMultipleAlgo(npuzzle npuzzle.Npuzzle) {
 		if !finish {
 			finish = true
 			displaying.DisplaySol(npuzzle3, true)
-			fmt.Println("yo")
 			fmt.Println("\nThe winner is A with euclidean")
 			wg.Done()
 		}
