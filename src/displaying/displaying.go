@@ -22,6 +22,7 @@ func refresh(npuzzle npuzzle.Npuzzle, num_puzzle int, show_map bool) {
 	fmt.Printf("\n")
 	fmt.Printf("Move number %d\n\n", num_puzzle)
 	utils.PrintGrid(npuzzle.Sol[num_puzzle], npuzzle.Size)
+	fmt.Printf("\nPress \"q\" to quit\n")
 }
 
 func DisplaySol(npuzzle npuzzle.Npuzzle, show_map bool) {

@@ -20,7 +20,7 @@ func parse_args(show_map *bool, display *string, boost *float64,
 		"manhattan, euclidean, linear_conflict, manhattan_lc or dijkstra")
 	flag.Float64Var(boost, "boost", 1, "choose a boost level: >= 1")
 	flag.BoolVar(multi_processing, "multi_processing", false, "run multiple algo at the same time."+
-		"If true, flags algo and h are ignored")
+		"If true, flags algo h, show_map and display are ignored")
 	flag.Parse()
 }
 
@@ -66,7 +66,6 @@ func main() {
 	if multi_processing {
 		multiprocessing.RunMultipleAlgo(npuzzle)
 	} else {
-		//fmt.Println("\nSolvable:", npuzzle.CheckSolvable(), "\n")
 		if !npuzzle.Solve(algo, heuristic, boost) {
 			fmt.Println("error: algo", algo, "with heuristic", heuristic, "is not a good mix")
 			return
