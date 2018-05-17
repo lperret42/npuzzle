@@ -13,7 +13,7 @@ import (
 func parse_args(show_map *bool, display *string, boost *float64,
 	goal, algo, heuristic *string, multi_processing *bool) {
 	flag.BoolVar(show_map, "show_map", false, "print initial map")
-	flag.StringVar(display, "display", "verbose", "verbose or user")
+	flag.StringVar(display, "display", "user", "verbose or user")
 	flag.StringVar(goal, "goal", "snake", "choose shape of goal: snake or linear")
 	flag.StringVar(algo, "algo", "A", "choose an algo: A or IDA")
 	flag.StringVar(heuristic, "h", "manhattan", "choose an heuristic: "+
